@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Dom</title>
+</head>
+<body>
+    <h1 id="title">Demo HTML Dom</h1>
+    <p id="para">This is a paragraph.</p>
+    
+    <ul id="list-lesson"> 
+        <li>Lesson 6</li>
+        <li>Lesson 7</li>
+    </ul>
+
+    <script>
+        // tìm kiếm các element trong tài liệu html
+        // và trả về element có id được chỉ định
+        let titleElement = document.getElementById("title");
+        console.log(titleElement); //in ra cả thẻ html
+        console.log(titleElement.innerHTML); // in ra nd trong thẻ html 
+        
+        //demo HTML Dom ->lesson 8 - Demo HTML Dom
+        titleElement.innerHTML = "lesson 8- Demo HTML DOM";
+        
+        //chỉnh màu thẻ h1
+        titleElement.style.color = "red";
+
+        //tìm và chỉnh element <p>
+        let paraElement = document.getElementById("para");
+        paraElement.innerHTML = "lesson 8- Demo HTML DOM para";
+
+        //chỉnh màu back ground của thẻ p
+        paraElement.style.backgroundColor = "green";
+
+        //thêm 1 thẻ li vào trong thẻ ul bằng js
+        let listLessonElement = document.getElementById("list-lesson");
+        
+
+        //Tạo mới thẻ li
+        let newListItemElement = document.createElement("li");
+        newListItemElement.innerHTML = "lesson 8 -html";
+
+        console.log("new list item element");
+        console.log(newListItemElement);
+
+        listLessonElement.appendChild(newListItemElement);
+    </script>
+</body>
+</html>
